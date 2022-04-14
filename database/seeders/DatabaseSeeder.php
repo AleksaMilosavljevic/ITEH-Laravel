@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\MotorSeeder;
+use Database\Seeders\VlasnikSeeder;
+use Database\Seeders\ProizvodjacSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +16,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $proizvodjacS = new ProizvodjacSeeder();
+        $vlasnikS = new VlasnikSeeder();
+        $motorS = new MotorSeeder();
+
+        $proizvodjacS->run();
+        $vlasnikS->run();
+        $motorS->run();
     }
 }

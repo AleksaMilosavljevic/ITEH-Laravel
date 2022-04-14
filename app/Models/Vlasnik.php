@@ -10,6 +10,12 @@ class Vlasnik extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'imePrezime',
+        'adresa',
+        'iskustvo',
+    ];
+
     public function motori()
     {
         return $this->hasMany(Motor::class);

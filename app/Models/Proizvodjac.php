@@ -10,6 +10,12 @@ class Proizvodjac extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'kompanija',
+        'godinaOsnivanja',
+        'website',
+    ];
+
     public function motori()
     {
         return $this->hasMany(Motor::class);

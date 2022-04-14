@@ -11,6 +11,14 @@ class Motor extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'model',
+        'godinaProizvodnje',
+        'cena',
+        'proizvodjac_id',
+        'vlasnik_id'
+    ];
+
     public function proizvodjac()
     {
         return $this->belongsTo(Proizvodjac::class);
